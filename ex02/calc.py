@@ -20,6 +20,7 @@ if __name__ == "__main__":
                         height=2,
                         font=("times New Roman", 30)
                         )
+        btn.bind("<1>", button_click)
         btn.grid(row = r, column = c)
         c += 1
         if (num-1) % 3 == 0:
