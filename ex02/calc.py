@@ -10,7 +10,7 @@ def button_click(event):
         res = eval(eqn)
         entry.delete(0, tk.END)
         entry.insert(tk.END, res)
-    if num == "C":
+    elif num == "C":
         entry.delete(0, tk.END)
     else:
         entry.insert(tk.END, num)
