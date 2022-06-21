@@ -5,7 +5,11 @@ import tkinter.messagebox as tkm
 def button_click(event):
     btn = event.widget
     num = btn["txt"]
-    #tkm.showinfo("", f"{num}のボタンがクリックされました。")
+    if num == "=":
+        eqn = entry.get()
+        res = eval(eqn)
+        print(res)
+    entry.delete(0, tk.END)
     entry.insert(tk.END, num)
 
 if __name__ == "__main__":
@@ -13,10 +17,10 @@ if __name__ == "__main__":
     #root.geometry("300x500")
     root.title("電卓")
 
-    entry = tk.Entry(root, justify="right", width=10, font=("Times New Roman", 40))]
+    entry = tk.Entry(root, justify="right", width=10, font=("Times New Roman", 40))
     entry.grid(row = 0, colmn = 0, columnspan = 3)
     r, c = 0, 0
-    for i, num in enumerate ([i for i in range(9, -1, -1)] + ["+"]):
+    for i, num in enumerate ([9, 8, 7, 6, 5, 4, 3, 2, 1, 0, "+", "="]):
         btn = tk.Button(root,
                         text=f"{num}",
                         width=4,
