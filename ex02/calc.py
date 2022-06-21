@@ -8,9 +8,12 @@ def button_click(event):
     if num == "=":
         eqn = entry.get()
         res = eval(eqn)
-        print(res)
-    entry.delete(0, tk.END)
-    entry.insert(tk.END, num)
+        entry.delete(0, tk.END)
+        entry.insert(tk.END, res)
+    if num == "C":
+        entry.delete(0, tk.END)
+    else:
+        entry.insert(tk.END, num)
 
 if __name__ == "__main__":
     root = tk.Tk()
@@ -20,7 +23,7 @@ if __name__ == "__main__":
     entry = tk.Entry(root, justify="right", width=10, font=("Times New Roman", 40))
     entry.grid(row = 0, colmn = 0, columnspan = 3)
     r, c = 0, 0
-    for i, num in enumerate ([9, 8, 7, 6, 5, 4, 3, 2, 1, 0, "+", "="]):
+    for i, num in enumerate ([9, 8, 7, 6, 5, 4, 3, 2, 1, 0, "+", "-", "*", "/", "^", "C"]):
         btn = tk.Button(root,
                         text=f"{num}",
                         width=4,
