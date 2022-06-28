@@ -25,22 +25,22 @@ def main_proc():
     except:
         pass
     cx, cy = mx*100+50, my*100+50
-    canvas.coords("kusodori", cx, cy)
+    canvas.coords("syobon", cx, cy)
     root.after(100, main_proc)
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.title("迷える糞鳥")
+    root.title("迷えるしょぼん")
 
     canvas = tk.Canvas(root, width=1500, height=900, bg="black")
     canvas.pack()
     maze_bg = mm.make_maze(15, 9)
     mm.show_maze(canvas, maze_bg)
 
-    kusodori = tk.PhotoImage(file="fig/0.png")
+    syobon = tk.PhotoImage(file="fig/syobon.png")
     mx, my = 1, 1
     cx, cy = mx*100+50, my*100+50
-    canvas.create_image(cx, cy, image=kusodori, tag="kusodori")
+    canvas.create_image(cx, cy, image=syobon, tag="syobon")
 
     key = ""
     root.bind("<KeyPress>", key_down)
