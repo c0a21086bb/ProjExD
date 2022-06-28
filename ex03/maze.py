@@ -1,5 +1,9 @@
 import tkinter as tk
 
+def key_down(event):
+    global key
+    key = event.keysym
+    print(key)
 
 if __name__ == "__main__":
     root = tk.Tk()
@@ -11,5 +15,8 @@ if __name__ == "__main__":
     kusodori = tk.PhotoImage(file="fig/0.png")
     cx, cy = 300, 400
     canvas.create_image(cx, cy, image=kusodori, tag="kusodori")
+
+    key = ""
+    root.bind("<KeyPress>", key_down)
 
     root.mainloop()
