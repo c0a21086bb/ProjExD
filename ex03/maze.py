@@ -1,16 +1,16 @@
 import tkinter as tk
 import maze_maker as mm
 
-def key_down(event):
+def key_down(event): #何のキーを押しているか判定する
     global key
     key = event.keysym
     #print(key)
 
-def key_up(event):
+def key_up(event): #キーが離されたことを判定する
     global key
     key = ""
 
-def main_proc():
+def main_proc(): #移動
     global cx, cy, mx, my
     delta = {#キー：押されているキーkey/値：移動幅リスト[x, y]
         ""     :[0,  0],
@@ -28,7 +28,7 @@ def main_proc():
     canvas.coords("syobon", cx, cy)
     root.after(100, main_proc)
 
-if __name__ == "__main__":
+if __name__ == "__main__": #main
     root = tk.Tk()
     root.title("迷えるしょぼん")
 
