@@ -94,22 +94,22 @@ def main():
         vx2 *= yoko
         vy2 *= tate
 
-        if kkimg_rct.colliderect(bmimg_rct1):
+        if kkimg_rct.colliderect(bmimg_rct1): #爆弾1の当たり判定
             pg.display.update
             clock.tick(0.2)
             return
 
-        if kkimg_rct.colliderect(bmimg_rct2):
+        if kkimg_rct.colliderect(bmimg_rct2): #爆弾2の当たり判定
             pg.display.update
             clock.tick(0.2)
             return
 
-        if kkimg_rct.colliderect(bmimg_rct3):
+        if kkimg_rct.colliderect(bmimg_rct3): #爆弾3の当たり判定
             pg.display.update
             clock.tick(0.2)
             return
         
-        if kkimg_rct.colliderect(bmimg_rct4):
+        if kkimg_rct.colliderect(bmimg_rct4): #爆弾4の当たり判定
             pg.display.update
             clock.tick(0.2)
             return
