@@ -11,15 +11,21 @@ def main():
     bgimg_rct = bgimg_sfc.get_rect()
     screen_sfc.blit(bgimg_sfc, bgimg_rct)
 
+    kkimg_sfc = pg.image.load("fig/6.png")
+    kkimg_sfc = pg.transform.rotozoom(kkimg_sfc, 0, 2.0)
+    kkimg_rct = kkimg_sfc.get_rect()
+    kkimg_rct.center = 900, 400
+
     while True:
         screen_sfc.blit(bgimg_sfc, bgimg_rct)
+        screen_sfc.blit(kkimg_sfc, kkimg_rct)
 
-        for event in pg.event.get:
+        for event in pg.event.get():
             if event.type == pg.QUIT:
                 return
 
         pg.display.update()
-        clock.teck(1000)
+        clock.tick(1000)
 
 
 if __name__ == "__main__":
