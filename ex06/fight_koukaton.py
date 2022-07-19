@@ -95,7 +95,7 @@ class Score:
 def main():
     score = 0
     clock = pg.time.Clock()
-    scr = Screen("負けるな！こうかとん", (1600, 900), "fig/pg_bg.jpg")
+    scr = Screen("がんばれ！こうかとん", (1600, 900), "fig/pg_bg.jpg")
     kkt = Bird("fig/6.png", 2.0, (900, 400))
     bkb1 = Bomb((255,0,0), 10, (+0,+1), scr)
     bkb2 = Bomb((255,0,0), 10, (+0,+2), scr)
